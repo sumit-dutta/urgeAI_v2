@@ -52,6 +52,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-DataFiles/
+/DataFiles/*
 
 *.DS_Store
