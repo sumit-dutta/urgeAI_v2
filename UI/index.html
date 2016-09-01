@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looksmash: Your Personal Stylist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="javascript/feed.js"></script>
+    <style>
+        .item {    height: 500px;
+                   width: 362px;
+                   display: inline-block;
+                   vertical-align: middle;
+                   position: relative;
+               }
+
+        .image {    height: 450px;
+                   width: 350px;
+                   display: inline;
+                   position: relative;
+               }
+
+         .logo{
+                    height: 100px;
+
+               }
+
+         .topBar{
+                    border-bottom: 1px solid grey;
+                }
+
+
+         .input{
+                    font-family: "Comic Sans MS", cursive, sans-serif;
+                    color: #00b359;
+                    border-style: dashed;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: #396046;
+                }
+
+                .accentuate{
+                    position: relative;
+                    display: inline-block;
+
+                    padding: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: beige;
+                    vertical-align: top;
+                    margin: 10px;
+                }
+
+                .skinTone{
+                    position: relative;
+                    display: inline-block;
+
+                    padding: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: beige;
+                    vertical-align: top;
+                    margin: 10px;
+                }
+                .color{
+                    position: relative;
+                    display: inline-block;
+
+                    padding: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: beige;
+                    vertical-align: top;
+                    margin: 10px;
+                }
+
+                .type{
+                    position: relative;
+                    display: inline-block;
+
+                    padding: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: beige;
+                    vertical-align: top;
+                    margin: 10px;
+                }
+
+                .toggle{
+                        display: inline;
+                        position: fixed;
+                        z-index: 1;
+                        cursor: pointer;
+                        height: 50px;
+                        left: 90%;
+                        top: 87px;
+                }
+
+                .head{
+                    font-size: 16px;
+                    color: #111;
+                    font-weight: bold;
+                }
+
+                .btn{
+                        background-color: #a65959; /* Green */
+                        border: none;
+                        color: white;
+                        padding: 15px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        border-radius: 5px;
+                        margin: 5px;
+                        cursor: pointer;
+
+                }
+
+                .result{
+                        max-height:600px;
+                        overflow-y: scroll;
+                }
+
+                .loading{
+                        display: none;
+                        position: fixed;
+                        top: 250px;
+                        left: 35%;
+                        z-index: 1;
+                }
+
+                .test{
+                    float: right;
+                    height: 100px;
+
+                }
+
+                .testMsg{
+                        margin-top: 20px;
+                        color: #111;
+                        float: right;
+                        font-family: "Comic Sans MS", cursive, sans-serif;
+                        font-size: 30px;
+                }
+
+                .got{
+                        font-size: 10px;
+                        float: right;
+                }
+
+                    a {
+                          color: inherit;
+                          text-decoration: inherit;
+}
+
+    </style>
+
+</head>
+<body>
+<img class="loading" src="images/loading.gif">
+<div class="topBar">
+    <img class="logo" src="images/logo.png">
+    <div class="testMsg">Alpha Testing Version
+        <br>
+        <span class="got">
+            Brace yourself, bugs are coming!
+        </span>
+    </div>
+</div>
+<img class="toggle" src="images/user.png">
+<div class="input">
+
+
+    <div class="accentuate">
+        <span class="head">Accentuate:</span><br><br>
+        <input type="checkbox" name="accentuate" value="arms">Arms
+        <input type="checkbox" name="accentuate" value="bust">Bust<br>
+        <input type="checkbox" name="accentuate" value="waist">Waist
+        <input type="checkbox" name="accentuate" value="legs">Legs
+    </div>
+
+
+    <div class="skinTone">
+        <span class="head">Skin Tone:</span><br><br>
+        <select class="skTone">
+            <option value="dusky">Dusky</option>
+            <option value="wheatish">Wheatish</option>
+            <option value="fair">Fair</option>
+        </select>
+    </div>
+    <br>
+    <div class="color">
+        <span class="head">Colors:</span> <br><br>
+    </div>
+    <br>
+    <div class="type">
+        <span class="head">Types:</span> <br><br>
+    </div>
+    <br>
+    <button class="submit btn">Submit</button>
+    <button class="close btn">Close</button>
+</div>
+
+<div class="result"></div>
+
+</body>
+</html>
